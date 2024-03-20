@@ -1,1 +1,22 @@
-
+    int largest=arr[0];
+    int Sec_largest = arr[0];
+    
+    int temp= 0;
+    
+    for(int i = 0; i<8; i++){
+         
+        if(largest < arr[i+1]){
+            temp= largest;
+            largest= arr[i+1];
+        }
+        if(Sec_largest!=largest){
+            Sec_largest= temp;
+        }
+      
+        
+    }
+     cout<<largest<<"\n";
+     cout<<Sec_largest<<"\n";
+   
+    
+    
