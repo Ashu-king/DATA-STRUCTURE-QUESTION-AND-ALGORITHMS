@@ -1,4 +1,7 @@
-    int largest=arr[0];
+question 1)
+
+// finding the largest and the second largest
+int largest=arr[0];
     int Sec_largest = arr[0];
     
     int temp= 0;
@@ -18,5 +21,26 @@
      cout<<largest<<"\n";
      cout<<Sec_largest<<"\n";
    
+question 2)
+
+//        finding if array is sorted or not
+
+ int arr[8] = {1,2,3,4,8,5,6,7};
     
+    int temp = 0;
+    int largest= arr[0];
+    for(int i = 0; i<8; i++){
+     if(largest<=arr[i+1]){
+         largest = arr[i+1];
+         temp=0;
+     }else{
+         temp=1;
+         break;
+     }
+     
+    }
+    if(temp==1) cout<<"not sorted";
+    else cout<<"sorted";
+
+
     
