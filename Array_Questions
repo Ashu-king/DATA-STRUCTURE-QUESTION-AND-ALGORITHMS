@@ -115,5 +115,45 @@ int main() {
       }
   }
 
+//question 6) union b/w two sorted arrays
+
+
+ int a1[6]={1,2,3,4,5,6};
+ int a2[6]={2,3,7,8,9,10};
+ int i=0;
+ int j = 0;
+ int k = 0;
+ vector<int>temp;
+ while(i<6&&j<6){
+     
+     if(a1[i]<=a2[j]){
+         if(temp.size()==0||temp.back()!=a1[i]){
+             temp.push_back(a1[i]);
+         }
+         i++;
+     }else{
+         
+         if(temp.size()==0||temp.back()!=a2[j]){
+             temp.push_back(a2[j]);
+         }
+         j++;
+     }
+ }
+ while(i<6&&j==6){
+       if(temp.size()==0||temp.back()!=a1[i]){
+             temp.push_back(a1[i]);
+         }
+         i++;
+ }
+  while(j<6&&i==6){
+       if(temp.size()==0||temp.back()!=a2[j]){
+             temp.push_back(a2[j]);
+         }
+         i++;
+ }
+ 
+ for (auto i = temp.begin(); i != temp.end(); ++i) 
+        cout << *i << " "; 
+  
 
     
