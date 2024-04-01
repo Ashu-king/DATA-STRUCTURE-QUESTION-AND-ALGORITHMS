@@ -197,5 +197,43 @@ int main()
     return 0;
 }
   
+Question 9) // two sum problem
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        map<int,int>mpp;
+        int n = nums.size();
+        for(int i = 0; i<n; i++){
+            int num = nums[i];
+            int needed = target-num;
+            if(mpp.find(needed)!=mpp.end()){
+                return {mpp[needed],i};
+            }
+            mpp[num] = i;
+        }
+        return{-1,-1};
+
+    }
+};
+
+Question 10) Sort 0,1,2
+
+void sortColors(vector<int>& nums) {
+    int low = 0, mid = 0, high = nums.size() - 1;
+
+    while (mid <= high) {
+        if (nums[mid] == 0) {
+            swap(nums[low], nums[mid]);
+            low++;
+            mid++;
+        } else if (nums[mid] == 1) {
+            mid++;
+        } else {
+            swap(nums[mid], nums[high]);
+            high--;
+        }
+    }
+}
 
     
